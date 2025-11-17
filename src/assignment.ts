@@ -80,24 +80,7 @@ function printBookDetails(obj: Book) {
 // PROBLEM NUMBER: 07
 const array1 = [1, 2, 3, 4, 5];
 const array2 = [3, 4, 5, 6, 7];
-const array3 = [
-  "rijvi",
-  "saimon",
-  "rijvi",
-  "saimon",
-  "rijvi",
-  "islam",
-  "islam",
-];
-const array4 = [
-  "fardin",
-  "jahin",
-  "muskan",
-  "adrita",
-  "fardin",
-  "muskan",
-  "jahin",
-];
+
 type UniqueArr = number | string;
 
 const getUniqueValues = (arr1: UniqueArr[], arr2: UniqueArr[]): UniqueArr[] => {
