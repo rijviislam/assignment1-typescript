@@ -101,8 +101,15 @@ const array4 = [
 type UniqueArr = number | string;
 
 const getUniqueValues = (arr1: UniqueArr[], arr2: UniqueArr[]): UniqueArr[] => {
-  const newArr = [...arr1, ...arr2];
+  let newArr: UniqueArr[] = [];
   const resArr: UniqueArr[] = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    newArr.push(arr1[i]);
+  }
+  for (let j = 0; j < arr2.length; j++) {
+    newArr.push(arr2[j]);
+  }
   for (let i = 0; i < newArr.length; i++) {
     if (!resArr.includes(newArr[i])) {
       resArr.push(newArr[i]);
@@ -110,3 +117,37 @@ const getUniqueValues = (arr1: UniqueArr[], arr2: UniqueArr[]): UniqueArr[] => {
   }
   return resArr;
 };
+
+// PROBLEM NUMBER: 08
+interface Product {
+  name: string;
+  price: number;
+  quantity: number;
+  discount?: number;
+}
+
+const calculateTotalPrice = (arr: Product[]): number => {
+  if (!Array.isArray(arr) || arr.length === 0) return 0;
+  let baseTotal: number = 0;
+  let discountAmount: number = 0;
+
+  arr.reduce((acc, curr) => {
+    return (baseTotal += curr.price * curr.quantity);
+  }, 0);
+  arr.forEach((item) => {
+    if (item.discount) {
+      return (discountAmount +=
+        (item.price * item.quantity * item.discount) / 100);
+    }
+  });
+
+  return baseTotal - discountAmount;
+};
+
+const products = [
+  { name: "Pen", price: 10, quantity: 2 },
+  { name: "Notebook", price: 25, quantity: 3, discount: 10 },
+  { name: "Bag", price: 50, quantity: 1, discount: 20 },
+];
+
+console.log(calculateTotalPrice(products));
