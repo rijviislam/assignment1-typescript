@@ -1,4 +1,3 @@
-
 #### What are some differences between interfaces and types in TypeScript?
 
 TypeScript-এ interface এবং type দুটোই অবজেক্টের ধরন নির্ধারণ করতে ব্যবহার করা হয়।
