@@ -1,5 +1,3 @@
-// PROBLEM NUMBER: 01
-
 function formatValue(
   val: string | number | boolean
 ): string | number | boolean {
@@ -12,7 +10,6 @@ function formatValue(
   }
 }
 
-// PROBLEM NUMBER: 02
 function getLength(val: string | any[]): number {
   if (typeof val === "string") {
     return val.length;
@@ -21,8 +18,6 @@ function getLength(val: string | any[]): number {
   }
   return 0;
 }
-
-// PROBLEM NUMBER: 03
 
 class Person {
   name: string;
@@ -39,8 +34,6 @@ class Person {
 const person1 = new Person("John Doe", 30);
 const person2 = new Person("Alice", 25);
 
-// PROBLEM NUMBER: 04
-
 type ArrItem = {
   title: string;
   rating: number;
@@ -49,8 +42,6 @@ type ArrItem = {
 const filterByRating = (arr: ArrItem[]): ArrItem[] => {
   return arr.filter((item) => item.rating >= 4);
 };
-
-// PROBLEM NUMBER: 05
 
 type UserArr = {
   id: number;
@@ -62,7 +53,6 @@ const filterActiveUsers = (arr: UserArr[]): UserArr[] => {
   return arr.filter((user) => user.isActive === true);
 };
 
-// PROBLEM NUMBER: 06
 interface Book {
   title: string;
   author: string;
@@ -77,7 +67,6 @@ function printBookDetails(obj: Book) {
 `);
 }
 
-// PROBLEM NUMBER: 07
 const array1 = [1, 2, 3, 4, 5];
 const array2 = [3, 4, 5, 6, 7];
 
@@ -101,7 +90,6 @@ const getUniqueValues = (arr1: UniqueArr[], arr2: UniqueArr[]): UniqueArr[] => {
   return resArr;
 };
 
-// PROBLEM NUMBER: 08
 interface Product {
   name: string;
   price: number;
