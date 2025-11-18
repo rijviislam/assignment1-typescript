@@ -7,7 +7,7 @@ Interface একাধিকবার declare করলে merge হয়, ক�
 Class সাধারণত interface implement করতে পারে, type সরাসরি implement করা যায় না।
 
 
-### What is the use of the keyof keyword in TypeScript? Provide an example.
+#### What is the use of the keyof keyword in TypeScript? Provide an example.
 
 keyof keyword দিয়ে কোনো object type-এর সব key কে type হিসেবে বের করা যায়।
 উদাহরণস্বরূপ, type UserKeys = keyof User; দিলে UserKeys হবে "id" | "name" | "email"।
